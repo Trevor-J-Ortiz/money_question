@@ -27,7 +27,7 @@ d_range = range(41)
 for i in d_range:
     d.append(i*25)
     
-totaltrue = 0
+possible_combinations = 0
 
 def numcount():
     global totaltrue
@@ -42,6 +42,6 @@ def numcount():
                         
 numcount()
 
-possible_combinations = sum(totaltrue)
+print(possible_combinations)
 
 #142511 combinations
