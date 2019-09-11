@@ -1,0 +1,59 @@
+#this is the problem mathematically
+#a+5b+10c+25d=1000
+
+""" Here is a simplified version of the code due to the actual computation taking a long time
+l=[1,2,3,4]
+k=[1,2,3,4]
+cnt = []
+def tst():
+    for l1 in l:
+        for k1 in k:
+            if k1+l1==6:
+                cnt.append(True)
+tst()
+print(cnt)
+sum(cnt)
+"""
+
+#Full answer
+
+a = []
+b = []
+c = []
+d = []
+
+#use ranges to append those lists with all possible values for a,b,c,d
+
+#note: with all the values being muliples of 5,
+#I am reducing a to be mutiples of 5 so it will reduce the number of computations
+w = range(201)
+for i in w:
+    a.append(i*5)
+
+x = range(201)
+for i in x:
+    b.append(i*5)
+    
+y = range(101)
+for i in y:
+    c.append(i*10)
+    
+z = range(41)
+for i in z:
+    d.append(i*25)
+    
+totaltrue = []
+
+def numcount():
+  #runs through all the possible iterations of the lists appending 'totaltrue'
+    for numa in a:
+        for numb in b:
+            for numc in c:
+                for numd in d:
+                    if numa + numb + numc + numd == 1000:
+                        totaltrue.append(True)
+                        #print(numa,numb,numc,numd)
+                        
+numcount()
+
+possible_combinations = sum(totaltrue)
