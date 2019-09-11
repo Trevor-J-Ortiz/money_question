@@ -27,16 +27,17 @@ d_range = range(41)
 for i in d_range:
     d.append(i*25)
     
-totaltrue = []
+totaltrue = 0
 
 def numcount():
-  #runs through all the possible iterations of the lists appending 'totaltrue'
+    global totaltrue
+  #runs through all the possible iterations of the lists increasing 'totaltrue'
     for numa in a:
         for numb in b:
             for numc in c:
                 for numd in d:
                     if numa + numb + numc + numd == 1000:
-                        totaltrue.append(True)
+                        totaltrue += 1
                         #print(numa,numb,numc,numd)
                         
 numcount()
