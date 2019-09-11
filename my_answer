@@ -1,22 +1,6 @@
 #this is the problem mathematically
 #a+5b+10c+25d=1000
 
-""" Here is a simplified version of the code due to the actual computation taking a long time
-l=[1,2,3,4]
-k=[1,2,3,4]
-cnt = []
-def tst():
-    for l1 in l:
-        for k1 in k:
-            if k1+l1==6:
-                cnt.append(True)
-tst()
-print(cnt)
-sum(cnt)
-"""
-
-#Full answer
-
 a = []
 b = []
 c = []
@@ -25,21 +9,22 @@ d = []
 #use ranges to append those lists with all possible values for a,b,c,d
 
 #note: with all the values being muliples of 5,
-#I am reducing a to be mutiples of 5 so it will reduce the number of computations
-w = range(201)
-for i in w:
+#I am reducing 'a' to be mutiples of 5 so it will reduce the number of computations in 'numcount()'
+
+a_range = range(201)
+for i in a_range:
     a.append(i*5)
 
-x = range(201)
-for i in x:
+b_range = range(201)
+for i in b_range:
     b.append(i*5)
     
-y = range(101)
-for i in y:
+c_range = range(101)
+for i in c_range:
     c.append(i*10)
     
-z = range(41)
-for i in z:
+d_range = range(41)
+for i in d_range:
     d.append(i*25)
     
 totaltrue = []
